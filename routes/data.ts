@@ -3,7 +3,6 @@
  */
 import express = require('express');
 const router = express.Router();
-import jmespath = require("jmespath");
 
 router.get('/', (req: express.Request, res: express.Response) => {
     let body = {
@@ -15,11 +14,7 @@ router.get('/', (req: express.Request, res: express.Response) => {
         ]
     };
 
-    if (req.headers["accept-ranges"] == "jmespath") {
-        var filter = req.headers["content-range"].substring(9);
-        res.statusCode = 206;
-        body = jmespath.search(body, filter);
-    }
+ 
 
     res.json(body);
 });

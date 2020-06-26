@@ -11,10 +11,12 @@
   },
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "debug": "^2.2.0",
     "express": "^4.14.0",
-    "pug": "^2.0.0-rc.3",
-    "jmespath": "0.15.0"
+    "express-mung": "0.5.1",
+    "jmespath": "0.15.0",
+    "pug": "^2.0.0-rc.3"
   },
   "devDependencies": {
     "@types/debug": "0.0.30",
