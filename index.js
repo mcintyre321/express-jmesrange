@@ -13,4 +13,4 @@ function modify(body, req, res, next) {
     return body;
 }
 module.exports = mung.json(modify);
-//# sourceMappingURL=JMESRange.js.map
+//# sourceMappingURL=index.js.map

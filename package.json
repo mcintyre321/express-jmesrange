@@ -1,6 +1,6 @@
 {
   "name": "jmesrange",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Express REST middleware for JMESPAth Content-Range",
   "private": true,
   "license": "MIT",
@@ -22,7 +22,7 @@
     "url": "https://github.com/mcintyre321/express-jmesrange/issues"
   },
   "author": "Harry McIntyre <mcintyre321@gmail.com>",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "debug": "^2.2.0",
