@@ -1,6 +1,6 @@
 {
-  "name": "jmesrange",
-  "version": "1.0.2",
+  "name": "express-jmesrange",
+  "version": "1.0.3",
   "description": "Express REST middleware for JMESPAth Content-Range",
   "private": false,
   "license": "MIT",

@@ -8,7 +8,7 @@ Express middleware for using JMESPath expression as range headers to filter/tran
 Install the package with npm:
 
 ```
-$ npm install express-range
+$ npm install express-jmesrange
 ```
 
 ## Configure
