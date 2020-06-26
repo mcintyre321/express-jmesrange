@@ -1,10 +1,12 @@
 ﻿var mung = require('express-mung');
 var jmespath = require('jmespath');
 function modify(body, req, res, next) {
-    if (body && req.headers["accept-ranges"] === "jmespath") {
-        var filter = req.headers["range"].substring(9);
+    //TODO: if Content-TYpe is application/json, add jmesrange to accept header (see https://github.com/purposeindustries/express-range/blob/master/index.js)
+    if (body && req.headers["range"] && req.headers["range"].startsWith("jmesrange ")) {
+        var filter = req.headers["range"].substring(10);
         if (filter) {
             res.statusCode = 206;
+            res.setHeader('Content-Range', filter)
             return jmespath.search(body, filter);
         }
     }
