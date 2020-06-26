@@ -1,7 +1,30 @@
 ﻿# JMESRange
-start the project (it will run on http://localhost:3000)
 
-curl the raw /data endpoint:
+
+Express middleware for using JMESPath expression as range headers to filter/transform JSON responses
+
+## Install
+
+Install the package with npm:
+
+```
+$ npm install express-range
+```
+
+## Configure
+
+Create middleware:
+
+```
+var app = express();
+app.use(jmesrange());
+```
+
+## Usage Example 
+
+Taken from the example app.js, running on localhost:3000:
+
+Curl the raw /data endpoint:
 
 ```
 ~/projects/jmesrange-express$ curl -i http://localhost:3000/data ; echo
@@ -18,6 +41,7 @@ Connection: keep-alive
 ```
 
 Now curl with a `range: jmesrange locations[?state == 'WA'].name` header:
+
 ```
 ~/projects/jmesrange-express$ curl -i -H "range: jmesrange locations[?state == 'WA'].name" http://localhost:3000/data ; echo
 HTTP/1.1 206 Partial Content

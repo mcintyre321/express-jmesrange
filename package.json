@@ -1,14 +1,27 @@
 {
   "name": "jmesrange",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Express REST middleware for JMESPAth Content-Range",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "start": "node app"
   },
-  "description": "JMESRange",
-  "author": {
-    "name": ""
+  "keywords": [
+    "express",
+    "content-range",
+    "range",
+    "JMESPath"
+  ],
+  "homepage": "https://github.com/mcintyre321/express-jmesrange",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcintyre321/express-jmesrange"
   },
+  "bugs": {
+    "url": "https://github.com/mcintyre321/express-jmesrange/issues"
+  },
+  "author": "Harry McIntyre <mcintyre321@gmail.com>",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.19.0",
