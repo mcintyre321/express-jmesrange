@@ -1,7 +1,13 @@
 ﻿# JMESRange
 
 
-Express middleware for using JMESPath expression as range headers to filter/transform JSON responses
+Express middleware for using JMESPath expression as range headers to filter/transform JSON responses. Who needs GraphQL anyway?
+
+## Function
+
+Once registered, it will intercept outgoing applicaton/json responses, and check for a header like `range: jmesrange <some jmespath expression>`. 
+
+If found, it will apply the jmespath expression to the outgoing object, allowing a client to shape the json response any way it wishes.
 
 ## Install
 
@@ -17,8 +23,10 @@ Create middleware:
 
 ```
 var app = express();
-app.use(jmesrange());
+...
+app.use(require('express-jmesrange'));
 ```
+
 
 ## Usage Example 
 
@@ -56,4 +64,4 @@ Connection: keep-alive
 ["Seattle","Bellevue","Olympia"]
 ```
 
-The output has been munged by JMESRange! Who needs graphql anyway? ;)
+The output has been munged by JMESRange!
