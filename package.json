@@ -2,7 +2,7 @@
   "name": "jmesrange",
   "version": "1.0.1",
   "description": "Express REST middleware for JMESPAth Content-Range",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "scripts": {
     "start": "node app"
